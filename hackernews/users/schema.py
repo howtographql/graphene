@@ -83,5 +83,6 @@ class CreateUser(graphene.Mutation):
         email = email.get('email')
 
         user = UserModel(username=username, email=email)
+        user.set_password(password)
         user.save()
         return user

@@ -20,6 +20,7 @@ def test_create_user(snapshot, db, graphql_client):
     '''))
     user = User.objects.first()
     assert user
+    assert user.check_password("1234")
     assert user.username == "peter"
     assert user.email == "peter@griffin.com"
 
