@@ -131,3 +131,11 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.User'
 
 GRAPHENE = {'SCHEMA': 'hackernews.schema.schema'}
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
+if DATABASE_URL:
+    import environ
+    env = environ.Env()
+
+    DATABASES = {'default': env.db()}

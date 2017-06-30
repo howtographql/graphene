@@ -1,2 +1,4 @@
 -r requirements-dev.txt
+# This requirements are for Heroku
 gunicorn
+psycopg2
