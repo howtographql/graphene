@@ -1,0 +1,11 @@
+{
+  "name": "Hackernews on GraphQL",
+  "description": "A repo-tutorial for GraphQL in Django.",
+  "website": "http://graphene-python.org",
+  "success_url": "/",
+  "addons": [],
+  "env": {
+    "DISABLE_COLLECTSTATIC": "1"
+  },
+  "scripts": {}
+}
