@@ -1,0 +1,4 @@
+-r requirements-dev.txt
+pytest
+pytest-django
+snapshottest
