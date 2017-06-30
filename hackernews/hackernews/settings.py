@@ -24,7 +24,7 @@ SECRET_KEY = '-5r$j!2vrhusw$9d(_!&(gz%igk^=3(n49kmv&r)mix427gy=^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
 
 # Application definition
 
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'oauth2_provider',
     'graphene_django',
     'users',
     'links',
@@ -130,3 +131,11 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.User'
 
 GRAPHENE = {'SCHEMA': 'hackernews.schema.schema'}
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
+if DATABASE_URL:
+    import environ
+    env = environ.Env()
+
+    DATABASES = {'default': env.db()}
