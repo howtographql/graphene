@@ -1,4 +1,7 @@
-# graphene
+# How to Graphene - Hacker News
+
+This repo aims to showcase how to create a simple Hacker News clone with Django and GraphQL.
+[Demo](https://howtographene-hn.herokuapp.com/graphql)
 
 # Install
 
