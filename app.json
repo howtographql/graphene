@@ -7,5 +7,7 @@
   "env": {
     "DISABLE_COLLECTSTATIC": "1"
   },
-  "scripts": {}
+  "scripts": {
+    "postdeploy": "python hackernews/manage.py migrate"
+  }
 }
